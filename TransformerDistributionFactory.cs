@@ -2,7 +2,7 @@
 
 namespace FactoryMethodPattern
 {
-    internal class TransformerDistributionFactory : TransformerFactory
+    public class TransformerDistributionFactory : TransformerFactory
     {
         public override ITransformer CreateTransformer()
         {
