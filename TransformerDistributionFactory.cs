@@ -1,9 +1,12 @@
-﻿namespace FactoryMethodPattern
+﻿using System;
+
+namespace FactoryMethodPattern
 {
-    internal class TransformerDistributionFactory : ITransformerFactory
+    internal class TransformerDistributionFactory : TransformerFactory
     {
-        public ITransformer CreateTransformer()
+        public override ITransformer CreateTransformer()
         {
+            Console.WriteLine("DistributionFactory produce transformer distribution!");
             return new TransformerDistribution();
         }
     }

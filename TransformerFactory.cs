@@ -2,12 +2,13 @@
 
 namespace FactoryMethodPattern
 {
-    class TransformerFactory
+    public abstract class TransformerFactory
     {
-        public ITransformer GetTransformer(string typeTransformer)
+        public void TransformerFactoryMessage()
         {
-            var transformerFactory = (ITransformerFactory)Activator.CreateInstance(Type.GetType("FactoryMethodPattern." + typeTransformer.ToString() + "Factory"));
-            return transformerFactory.CreateTransformer();
+            Console.WriteLine("Factory produce transformer!");
         }
+
+        public abstract ITransformer CreateTransformer();
     }
 }
